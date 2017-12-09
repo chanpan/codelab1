@@ -7,7 +7,7 @@ class App extends Component {
     imageUrl:""
   };
   componentDidMount(){
-    fetch('http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=7IolS1oNzepR5rF0H2ndF1G0COWIaf7C&limit=5')
+    fetch('https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=7IolS1oNzepR5rF0H2ndF1G0COWIaf7C&limit=5')
     .then(res=>res.json())
     .then(json=>json.data[3].images['downsized'].url)//json.data[0].images['480w_still'].url
     .then((url)=>{
