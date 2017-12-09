@@ -11,6 +11,7 @@ class App extends Component {
     .then(res=>res.json())
     .then(json=>json.data[3].images['downsized'].url)//json.data[0].images['480w_still'].url
     .then((url)=>{
+      console.log(url);
       this.setState({imageUrl:url});
     });
     
